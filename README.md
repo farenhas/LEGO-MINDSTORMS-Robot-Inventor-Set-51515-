@@ -63,7 +63,7 @@ Penjelasan konfigurasi motor:
 
 | Variabel              | Penjelasan                                                                 |
 |------------------------|------------------------------------------------------------------------------|
-| **Power**              | Besar tenaga (%) yang diberikan ke motor. Negatif = arah berlawanan.        |
+| **Power**              | Besar tenaga (%) yang diberikan ke motor.      |
 | **Speed**              | Kecepatan motor sebagai persentase dari kecepatan maksimum.                |
 | **Relative Position**  | Sudut motor relatif terhadap saat Hub dinyalakan / motor dipasang.          |
 | **Absolute Position**  | Posisi sudut absolut (dalam derajat), dengan acuan tetap.                   |
