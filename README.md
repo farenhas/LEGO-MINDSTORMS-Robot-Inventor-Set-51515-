@@ -11,8 +11,7 @@
 5. Update OS / Firmware Hub & Komponen Tambahan  
 6. Contoh Program Sederhana “Hello World”  
 7. Penjelasan Istilah-Istilah Penting  
-8. Letak Gambar di README  
-9. Referensi Tambahan  
+8. Referensi Tambahan  
 
 ---
 
@@ -28,9 +27,9 @@ Sebelum mulai, pastikan:
 
 ## 2. Instal Aplikasi
 
-- Jika kamu menggunakan **Windows**, buka Microsoft Store dan install lewat link ini:  
-  `https://apps.microsoft.com/detail/9mtq0n7w1d6x?launch=true&mode=full&hl=en-us&gl=id&ocid=bingwebsearch`  
-- Bila memakai **Mac / Android / iOS**, cari “LEGO MINDSTORMS Robot Inventor” di App Store / Google Play, lalu install seperti biasa.
+- **Windows**: Unduh di Microsoft Store lewat link berikut:  
+  [LEGO Robot Inventor App](https://apps.microsoft.com/detail/9mtq0n7w1d6x?launch=true&mode=full&hl=en-us&gl=id&ocid=bingwebsearch)  
+- **Mac / Android / iOS**: Cari “LEGO MINDSTORMS Robot Inventor” di App Store / Google Play, lalu install seperti biasa.
 
 ---
 
@@ -38,8 +37,8 @@ Sebelum mulai, pastikan:
 
 - Nyalakan Hub LEGO kamu.  
 - Sambungkan ke perangkat (komputer/tablet) lewat **Bluetooth** atau **USB**.  
-- Kalau bingung caranya, lihat tutorial ini:  
-  `https://www.youtube.com/watch?v=MEj1_pS3esw`
+- Jika masih bingung, ikuti tutorial:  
+  [Cara menghubungkan Hub LEGO](https://www.youtube.com/watch?v=MEj1_pS3esw)
 
 ---
 
@@ -48,37 +47,41 @@ Sebelum mulai, pastikan:
 Setelah Hub tersambung:
 
 - Aplikasi akan meminta update OS Hub jika perlu.  
-- Untuk melihat konfigurasi hardware/motor, klik tombol **“Open Hub connection”** di aplikasi (lihat Gambar 1).  
-- Akan muncul tampilan seperti ini: status motor untuk tiap port (misalnya A, B, C, D, F, dst), dan nilai-nilai seperti **Power**, **Speed**, **Relative Position**, **Absolute Position**, dan lainnya (lihat Gambar 2).  
+- Untuk melihat konfigurasi hardware/motor, klik **“Open Hub connection”** di aplikasi.  
 
-Berikut contoh tampilan konfigurasi motor:  
-![Gambar 1: Open Hub connection](https://github.com/user-attachments/assets/ff60885e-ff1c-46f7-b478-a87426970cee)  
-![Gambar 2: Konfigurasi motor & port](https://github.com/user-attachments/assets/1fe1ba9b-1212-4e0e-91ff-4dd6321325d4)
+Contoh tampilan:  
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/ff60885e-ff1c-46f7-b478-a87426970cee" alt="Gambar 1: Open Hub connection" width="400"/>
+</p>
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/1fe1ba9b-1212-4e0e-91ff-4dd6321325d4" alt="Gambar 2: Konfigurasi motor & port" width="400"/>
+</p>
 
 Penjelasan konfigurasi motor:
 
 | Variabel              | Penjelasan                                                                 |
 |------------------------|------------------------------------------------------------------------------|
-| **Power**              | Seberapa besar tenaga (daya %) yang diberikan ke motor. Negatif = arah negatif / balik. |
-| **Speed**              | Kecepatan motor sebagai persentase dari kecepatan maksimal.                |
-| **Relative Position**  | Sudut motor relatif terhadap posisi saat Hub dinyalakan atau motor dipasang. |
-| **Absolute Position**  | Posisi sudut absolut (biasanya dalam derajat), berdasarkan acuan tetap.     |
-| **Port**               | Port tempat motor/sensor dipasang di Hub (contoh: A, B, C, D, F).          |
+| **Power**              | Besar tenaga (%) yang diberikan ke motor. Negatif = arah berlawanan.        |
+| **Speed**              | Kecepatan motor sebagai persentase dari kecepatan maksimum.                |
+| **Relative Position**  | Sudut motor relatif terhadap saat Hub dinyalakan / motor dipasang.          |
+| **Absolute Position**  | Posisi sudut absolut (dalam derajat), dengan acuan tetap.                   |
+| **Port**               | Port tempat motor/sensor dipasang di Hub (contoh: A, B, C, D, F).           |
 
 ---
 
 ## 5. Update OS / Firmware Hub & Komponen Tambahan
 
-- Pastikan Hub tersambung ke **charger** selama update agar tidak mati tiba-tiba.  
-- Jika aplikasi mendeteksi ada update OS / firmware Hub, jalankan update tersebut.  
-- Setelah selesai, aplikasi menjadi konfirmasi bahwa firmware dan konten sudah diperbarui.  
-- Kalau ada motor atau sensor tambahan yang juga butuh update, lakukan sesuai instruksi aplikasi.
+- Pastikan Hub tersambung ke **charger** selama update.  
+- Jika ada update OS / firmware, jalankan sampai selesai.  
+- Lakukan juga update untuk motor atau sensor tambahan bila diminta oleh aplikasi.  
 
 ---
 
 ## 6. Contoh Program Sederhana “Hello World”
 
-Gunakan kode berikut sebagai latihan pertama. Simpan file misalnya `hello_world.py`.
+Buat file `hello_world.py` dengan isi berikut:
 
 ```python
 import hub
@@ -110,4 +113,42 @@ def setup(rpc, system, stop):
     vm.register_on_button("run_on_right_button", run, "right", "pressed")
     return vm
 
-setup(None, system.system, sys.exit).start()
+setup(None, system.system, sys.exit).start() 
+Untuk menjalankan program, klik tombol Run pada aplikasi:
+
+<p align="center"> <img src="https://github.com/user-attachments/assets/36721c45-9a89-444c-a69a-a2900cc316b0" alt="Tombol Run di aplikasi" width="400"/> </p>
+Penjelasan Singkat Kode:
+
+display: Menampilkan teks “Hello world” di layar Hub.
+
+sound: Memainkan suara “Hello” lalu “Celebrate”.
+
+cancel: Menghentikan program dan membersihkan layar/suara.
+
+setup: Mengatur event seperti tombol ditekan atau broadcast sinyal agar program bisa berjalan otomatis.
+
+7. Penjelasan Istilah-Istilah Penting
+
+Hub: Otak utama LEGO Inventor, mirip komputer mini.
+
+Port: Lubang koneksi di Hub untuk motor atau sensor.
+
+Firmware: Sistem operasi kecil yang ada di Hub.
+
+Runtime: Lingkungan eksekusi agar program bisa berjalan.
+
+Broadcast: Cara untuk mengirim sinyal antar bagian kode.
+
+8. Referensi Tambahan
+
+Dokumentasi Resmi LEGO MINDSTORMS
+
+Channel YouTube LEGO Education
+
+Untuk belajar lebih dalam:
+
+Dokumentasi resmi Motor API Robot Inventor: menjelaskan mode power, speed, posisi relatif & absolut.
+lego.github.io
+
+Quick Reference fungsi hub, motor & sensor dari Pybricks untuk set 51515.
+pybricks.com
