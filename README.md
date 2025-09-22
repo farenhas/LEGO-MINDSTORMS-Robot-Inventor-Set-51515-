@@ -10,7 +10,7 @@
 4. Cek Konfigurasi Hardware / Motor  
 5. Update OS / Firmware Hub & Komponen Tambahan  
 6. Contoh Program Sederhana “Hello World”  
-7. Penjelasan Istilah-istilah Penting  
+7. Penjelasan Istilah-Istilah Penting  
 8. Letak Gambar di README  
 9. Referensi Tambahan  
 
@@ -18,69 +18,67 @@
 
 ## 1. Persiapan
 
-Sebelum mulai:
+Sebelum mulai, pastikan:
 
-- Pastikan paket LEGO lengkap: Hub, motor, sensor, kabel, baterai atau charger/power.  
-- Siapkan komputer / tablet / HP yang kompatibel dengan aplikasi LEGO Robot Inventor.  
-- Siapkan koneksi internet agar bisa download aplikasi & update firmware.  
+- Semua bagian LEGO sudah ada: Hub, motor, sensor, kabel, baterai atau charger/power.  
+- Komputer / tablet / HP kamu kompatibel dengan aplikasi LEGO Robot Inventor.  
+- Ada koneksi internet agar bisa mengunduh aplikasi & melakukan update firmware.
 
 ---
 
 ## 2. Instal Aplikasi
 
-- Jika kamu memakai **Windows**, buka Microsoft Store dan install dengan link ini:  
+- Jika kamu menggunakan **Windows**, buka Microsoft Store dan install lewat link ini:  
   `https://apps.microsoft.com/detail/9mtq0n7w1d6x?launch=true&mode=full&hl=en-us&gl=id&ocid=bingwebsearch`  
-- Jika memakai **Mac / Android / iOS**, cari “LEGO MINDSTORMS Robot Inventor” di App Store / Google Play, lalu instal seperti biasa.
+- Bila memakai **Mac / Android / iOS**, cari “LEGO MINDSTORMS Robot Inventor” di App Store / Google Play, lalu install seperti biasa.
 
 ---
 
 ## 3. Sambungkan Hub
 
 - Nyalakan Hub LEGO kamu.  
-- Hubungkan ke perangkat (komputer/tablet) lewat **Bluetooth** atau **USB**.
-- Atau bisa lihat tutorial lebih lengkap ke link : https://www.youtube.com/watch?v=MEj1_pS3esw
+- Sambungkan ke perangkat (komputer/tablet) lewat **Bluetooth** atau **USB**.  
+- Kalau bingung caranya, lihat tutorial ini:  
+  `https://www.youtube.com/watch?v=MEj1_pS3esw`
 
 ---
 
 ## 4. Cek Konfigurasi Hardware / Motor
 
-Setelah hub tersambung:
+Setelah Hub tersambung:
 
-Nantinya akan update Hub OS
- ![WhatsApp Image 2025-09-22 at 18 36 58_2bcd7229](https://github.com/user-attachments/assets/3453efde-8a11-4c43-a5e4-65e4674ac9f4)
- ![WhatsApp Image 2025-09-22 at 18 42 12_3e8fa03c](https://github.com/user-attachments/assets/e9a868be-ef54-490e-bdc2-c845ff84f9f2)
+- Aplikasi akan meminta update OS Hub jika perlu.  
+- Untuk melihat konfigurasi hardware/motor, klik tombol **“Open Hub connection”** di aplikasi (lihat Gambar 1).  
+- Akan muncul tampilan seperti ini: status motor untuk tiap port (misalnya A, B, C, D, F, dst), dan nilai-nilai seperti **Power**, **Speed**, **Relative Position**, **Absolute Position**, dan lainnya (lihat Gambar 2).  
 
-- Untuk melihat konfigurasi, Klik tombol **“Open Hub connection”** di aplikasi
-  ![WhatsApp Image 2025-09-22 at 19 11 11_b40d98f7](https://github.com/user-attachments/assets/ff60885e-ff1c-46f7-b478-a87426970cee)
-
-- Aplikasi akan menunjukkan status motor / port (A, B, C, D, F, dll), serta nilai-nilai seperti power, speed, relative position, position absolut, dsb.  
-![WhatsApp Image 2025-09-22 at 19 11 20_0a645ad9](https://github.com/user-attachments/assets/1fe1ba9b-1212-4e0e-91ff-4dd6321325d4)
-  contoh tampilan konfigurasi, seperti port motor & nilai-nilai tersebut.
+Berikut contoh tampilan konfigurasi motor:  
+![Gambar 1: Open Hub connection](https://github.com/user-attachments/assets/ff60885e-ff1c-46f7-b478-a87426970cee)  
+![Gambar 2: Konfigurasi motor & port](https://github.com/user-attachments/assets/1fe1ba9b-1212-4e0e-91ff-4dd6321325d4)
 
 Penjelasan konfigurasi motor:
 
-| Variabel            | Penjelasan                                                                |
-|----------------------|------------------------------------------------------------------------|
-| **Power**            | Seberapa besar tenaga (daya %) yang diberikan ke motor. Negatif = arah balik. |
-| **Speed**            | Kecepatan putaran motor dalam persentase terhadap kecepatan maksimum.  |
-| **Relative Position**| Posisi sudut relatif terhadap posisi saat hub dinyalakan atau motor dipasang. |
-| **Absolute Position**| Posisi sudut absolut (biasanya dalam derajat) berdasarkan acuan tetap. |
-| **Port**             | Tempat pemasangan motor/sensor di Hub, misalnya A, B, C, D, F.         |
+| Variabel              | Penjelasan                                                                 |
+|------------------------|------------------------------------------------------------------------------|
+| **Power**              | Seberapa besar tenaga (daya %) yang diberikan ke motor. Negatif = arah negatif / balik. |
+| **Speed**              | Kecepatan motor sebagai persentase dari kecepatan maksimal.                |
+| **Relative Position**  | Sudut motor relatif terhadap posisi saat Hub dinyalakan atau motor dipasang. |
+| **Absolute Position**  | Posisi sudut absolut (biasanya dalam derajat), berdasarkan acuan tetap.     |
+| **Port**               | Port tempat motor/sensor dipasang di Hub (contoh: A, B, C, D, F).          |
 
 ---
 
 ## 5. Update OS / Firmware Hub & Komponen Tambahan
 
-- Pastikan Hub terhubung ke **charger** selama proses update agar tidak mati tiba-tiba.  
+- Pastikan Hub tersambung ke **charger** selama update agar tidak mati tiba-tiba.  
 - Jika aplikasi mendeteksi ada update OS / firmware Hub, jalankan update tersebut.  
-- Setelah update selesai, aplikasi akan muncul konfirmasi bahwa firmware + konten sudah diperbarui.  
-- Bila ada motor atau sensor tambahan yang juga perlu update, lakukan juga sesuai instruksi aplikasi.
+- Setelah selesai, aplikasi menjadi konfirmasi bahwa firmware dan konten sudah diperbarui.  
+- Kalau ada motor atau sensor tambahan yang juga butuh update, lakukan sesuai instruksi aplikasi.
 
 ---
 
 ## 6. Contoh Program Sederhana “Hello World”
 
-Kode berikut bisa kamu pakai sebagai latihan pertama. Simpan dengan nama misalnya `hello_world.py`.
+Gunakan kode berikut sebagai latihan pertama. Simpan file misalnya `hello_world.py`.
 
 ```python
 import hub
@@ -113,7 +111,3 @@ def setup(rpc, system, stop):
     return vm
 
 setup(None, system.system, sys.exit).start()
-
-kemudian untuk menjalankan klik tombol run di sisi kanan bawah 
-![WhatsApp Image 2025-09-22 at 19 18 56_efdc8782](https://github.com/user-attachments/assets/b881df23-c050-4129-aadb-ceee4dc6f180)
-
